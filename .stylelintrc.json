@@ -5,7 +5,7 @@
   ],
   "rules": {
     "selector-class-pattern": null,
-    "indentation": [4],
+    "indentation": [2],
     "order/order": [
       "custom-properties",
       "declarations"

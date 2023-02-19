@@ -8,8 +8,7 @@ module.exports = {
     },
     extends: [
         'plugin:react/recommended',
-        'standard-with-typescript',
-        'plugin:i18next/recommended'
+        'standard-with-typescript'
     ],
     overrides: [],
     parserOptions: {
@@ -19,14 +18,18 @@ module.exports = {
     },
     plugins: [
         'react',
-        '@typescript-eslint',
-        'i18next'
+        '@typescript-eslint'
+        // 'i18next'
     ],
     rules: {
         'react/jsx-indent': [2, 4],
         indent: [2, 4],
         '@typescript-eslint/indent': [2, 4],
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': [2,
+            {
+                extensions: ['.js', '.jsx', '.tsx']
+            }
+        ],
         'import/no-unresolved': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         'no-unused-vars': 'warn',
@@ -35,8 +38,7 @@ module.exports = {
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
-        'mex-len': ['error',
+        'max-len': ['error',
             {
                 ignoreComments: true
             }
