@@ -8,7 +8,7 @@ module.exports = {
     },
     extends: [
         'plugin:react/recommended',
-        // 'standard-with-typescript',
+        'standard-with-typescript',
         'plugin:i18next/recommended'
     ],
     overrides: [],
@@ -35,6 +35,11 @@ module.exports = {
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }]
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'mex-len': ['error',
+            {
+                ignoreComments: true
+            }
+        ]
     }
 }

@@ -1,15 +1,15 @@
-import {classNames} from "./classNames";
+import { classNames } from './classNames'
 
 describe('classNames', () => {
     test('with first param only', () => {
         expect(classNames('someClass'))
-            .toBe('someClass');
+            .toBe('someClass')
     })
 
     test('with additional class', () => {
         const expected = 'someClass class1 class2'
         expect(classNames('someClass', {}, ['class1', 'class2']))
-            .toBe(expected);
+            .toBe(expected)
     })
 
     test('with mods', () => {
@@ -19,7 +19,7 @@ describe('classNames', () => {
             { hovered: true, scrollable: true },
             ['class1', 'class2']
         ))
-            .toBe(expected);
+            .toBe(expected)
     })
 
     test('with mods false', () => {
@@ -29,7 +29,7 @@ describe('classNames', () => {
             { hovered: true, scrollable: false },
             ['class1', 'class2']
         ))
-            .toBe(expected);
+            .toBe(expected)
     })
 
     test('with mods undefined', () => {
@@ -39,6 +39,6 @@ describe('classNames', () => {
             { hovered: true, scrollable: undefined },
             ['class1', 'class2']
         ))
-            .toBe(expected);
+            .toBe(expected)
     })
-});
+})
