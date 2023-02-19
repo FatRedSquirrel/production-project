@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-import {classNames} from "shared/lib/classNames";
+import { classNames } from 'shared/lib/classNames'
 
-import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
-import {ThemeSwitcher} from "widgets/ThemeSwitcher";
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 
-import cls from './Navbar.module.scss';
-
+import cls from './Navbar.module.scss'
 
 interface NavbarProps {
-    className?: string;
+    className?: string
 }
 
-export const Navbar = ({className}: NavbarProps) => {
+export const Navbar = ({ className }: NavbarProps) => {
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
             <div className={cls.links}>
@@ -20,5 +18,5 @@ export const Navbar = ({className}: NavbarProps) => {
                 <AppLink theme={AppLinkTheme.SECONDARY} to={'/about'}>Информация</AppLink>
             </div>
         </div>
-    );
-};
+    )
+}
