@@ -21,10 +21,14 @@ export const Button = (props: PropsWithChildren<ButtonProps>) => {
         ...otherProps
     } = props
 
+    const themeClass = theme ? cls[theme] : ''
+
+    const additional = className ? [className, themeClass] : [themeClass]
+
     return (
         <button
             type='button'
-            className={classNames(cls.button, {}, [className, cls[theme]])}
+            className={classNames(cls.button, {}, additional)}
             {...otherProps}
         >
             {children}

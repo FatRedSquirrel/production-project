@@ -17,10 +17,12 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
         await i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en')
     }
 
+    const additional = className ? [className] : []
+
     return (
         <Button
             onClick={toggleLanguage}
-            className={classNames(cls.langSwitcher, {}, [className])}
+            className={classNames(cls.langSwitcher, {}, additional)}
             theme={ThemeButton.CLEAR}
         >
             {i18n.language}
