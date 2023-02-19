@@ -10,8 +10,10 @@ import { Sidebar } from 'widgets/Sidebar'
 const App = () => {
     const { theme } = useTheme()
 
+    const additional = theme ? [theme] : [];
+
     return (
-        <div className={classNames('app', {}, [theme])}>
+        <div className={classNames('app', {}, additional)}>
             <Suspense fallback="">
                 <Navbar/>
                 <div className='content-page'>

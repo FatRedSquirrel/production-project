@@ -22,10 +22,12 @@ export const AppLink = (props: PropsWithChildren<AppLinkProps>) => {
         ...otherProps
     } = props
 
+    const additional = className ? [className, cls[theme]] : [cls[theme]]
+
     return (
         <Link
             to={to}
-            className={classNames(cls.appLink, {}, [className, cls[theme]])}
+            className={classNames(cls.appLink, {}, additional)}
             {...otherProps}
         >
             {children}

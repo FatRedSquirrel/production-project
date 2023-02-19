@@ -3,7 +3,7 @@ import { useContext } from 'react'
 
 interface UseThemeResult {
     toggleTheme: () => void
-    theme: Theme
+    theme: Theme | undefined
 }
 
 export function useTheme (): UseThemeResult {
