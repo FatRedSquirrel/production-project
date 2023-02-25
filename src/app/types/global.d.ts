@@ -11,3 +11,4 @@ declare module '*.jpeg';
 declare const __IS_DEV__: boolean
 
 declare module 'react-dom/client';
+declare module 'react-test-renderer'

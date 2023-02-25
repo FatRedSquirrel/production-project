@@ -37,11 +37,6 @@ module.exports = {
         '@typescript-eslint/strict-boolean-expressions': 'off',
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
-        '@typescript-eslint/no-misused-promises': 'off',
-        'max-len': ['error',
-            {
-                ignoreComments: true
-            }
-        ]
+        '@typescript-eslint/no-misused-promises': 'off'
     }
 }
