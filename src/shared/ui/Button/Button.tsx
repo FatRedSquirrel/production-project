@@ -1,11 +1,11 @@
 import { type ButtonHTMLAttributes, type PropsWithChildren } from 'react'
 
 import { classNames } from 'shared/lib/classNames'
-
 import cls from './Button.module.scss'
 
 export enum ThemeButton {
-    CLEAR = 'clear'
+    CLEAR = 'clear',
+    OUTLINE = 'outline'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

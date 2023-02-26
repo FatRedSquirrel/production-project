@@ -26,3 +26,5 @@ export const ErrorPage = ({ className }: ErrorPageProps) => {
         </div>
     )
 }
+
+
