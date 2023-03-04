@@ -1,14 +1,14 @@
-declare module '*.scss' {
-    type IClassNames = Record<string, string>
-    const classNames: IClassNames
-    export = classNames
+declare module "*.scss" {
+    type IClassNames = Record<string, string>;
+    const classNames: IClassNames;
+    export = classNames;
 }
 
-declare module '*.svg';
-declare module '*.jpg';
-declare module '*.jpeg';
+declare module "*.svg";
+declare module "*.jpg";
+declare module "*.jpeg";
 
-declare const __IS_DEV__: boolean
+declare const __IS_DEV__: boolean;
 
-declare module 'react-dom/client';
-declare module 'react-test-renderer'
+declare module "react-dom/client";
+declare module "react-test-renderer"
