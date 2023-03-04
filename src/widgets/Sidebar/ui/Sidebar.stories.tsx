@@ -1,15 +1,15 @@
-import {ComponentMeta, ComponentStory} from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import {Sidebar} from "./Sidebar";
-import {ThemeDecorator} from "shared/config/storybook/ThemeDecorator";
-import {Theme} from "app/providers/ThemeProvider";
+import { Sidebar } from "./Sidebar";
+import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator";
+import { Theme } from "app/providers/ThemeProvider";
 
 export default {
-    title: 'widgets/Sidebar',
-    component: Sidebar,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+  title: "widgets/Sidebar",
+  component: Sidebar,
+  argTypes: {
+    backgroundColor: { control: "color" }
+  }
 } as ComponentMeta<typeof Sidebar>;
 
 const Template: ComponentStory<typeof Sidebar> = () => <Sidebar/>;
