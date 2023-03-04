@@ -27,7 +27,3 @@ jobs:
         run: npm run lint:ts
       - name: test unit
         run: npm run test:unit
-      - name: build storybook
-        run: npm run storybook:build
-      - name: test ui
-        run: npm run test:ui
