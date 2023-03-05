@@ -6,10 +6,6 @@
   background-color: var(--inverted-bg-color);
 }
 
-.collapsed {
-  width: var(--sidebar-width-collapsed);
-}
-
 .switchers {
   width: 100%;
   position: absolute;
@@ -18,4 +14,50 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+.items {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .icon {
+    fill: var(--inverted-primary-color);
+  }
+
+  .link {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 200ms;
+    opacity: 1;
+
+    span {
+      transition: opacity 200ms;
+    }
+  }
+}
+
+.collapseBtn {
+  position: absolute;
+  bottom: var(--font-line-l);
+  left: 100%;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+
+  .switchers {
+    flex-direction: column;
+  }
+
+  .link {
+    justify-content: center;
+
+    span {
+      width: 0;
+      opacity: 0;
+    }
+  }
 }

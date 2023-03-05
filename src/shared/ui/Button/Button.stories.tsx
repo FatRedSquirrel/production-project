@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Button, ThemeButton } from "./Button";
+import { Button, ButtonSize, ButtonTheme } from "./Button";
 
 export default {
   title: "ui/Button",
@@ -20,11 +20,47 @@ Primary.args = {
 export const Clear = Template.bind({});
 Clear.args = {
   children: "Text",
-  theme: ThemeButton.CLEAR
+  theme: ButtonTheme.CLEAR
 };
 
 export const Outlined = Template.bind({});
 Outlined.args = {
   children: "Text",
-  theme: ThemeButton.OUTLINE
+  theme: ButtonTheme.OUTLINE
+};
+
+export const BackgroundTheme = Template.bind({});
+BackgroundTheme.args = {
+  children: "Text",
+  theme: ButtonTheme.BACKGROUND
+};
+
+export const BackgroundInvertedTheme = Template.bind({});
+BackgroundInvertedTheme.args = {
+  children: "Text",
+  theme: ButtonTheme.BACKGROUND_INVERTED
+};
+
+export const SquareMode = Template.bind({});
+SquareMode.args = {
+  children: ">",
+  theme: ButtonTheme.BACKGROUND_INVERTED,
+  square: true,
+  size: ButtonSize.M
+};
+
+export const SquareModeSizeL = Template.bind({});
+SquareModeSizeL.args = {
+  children: ">",
+  theme: ButtonTheme.BACKGROUND_INVERTED,
+  square: true,
+  size: ButtonSize.L
+};
+
+export const SquareModeSizeXL = Template.bind({});
+SquareModeSizeXL.args = {
+  children: ">",
+  theme: ButtonTheme.BACKGROUND_INVERTED,
+  square: true,
+  size: ButtonSize.XL
 };
