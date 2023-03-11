@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Button, ButtonSize, ButtonTheme } from "./Button";
+import { Button, ButtonSize, ButtonTheme } from "shared/ui/Button/Button";
 
 export default {
   title: "ui/Button",
