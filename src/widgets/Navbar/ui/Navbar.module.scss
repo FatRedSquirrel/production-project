@@ -6,6 +6,10 @@
   align-items: center;
   background: var(--inverted-bg-color);
   gap: 40px;
+
+  &__link {
+    color: var(--inverted-primary-color);
+  }
 }
 
 .links {
