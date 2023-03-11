@@ -4,19 +4,18 @@ import { AppRouter } from "app/providers/router";
 import { Navbar } from "widgets/Navbar";
 import { Sidebar } from "widgets/Sidebar";
 
+import { classNames } from "shared/lib/classNames";
 import { useTheme } from "app/providers/ThemeProvider";
-import { Counter } from "entitites/Counter/ui/Counter";
 
 const App = () => {
-  const { theme } = useTheme();
 
-  document.body.className = theme ? theme : "";
+  const { theme } = useTheme();
+  document.body.className = theme;
 
   return (
-    <div className="app">
+    <div className={classNames("app", {}, [])}>
       <Suspense fallback="">
         <Navbar/>
-        <Counter/>
         <div className='content-page'>
           <Sidebar/>
           <AppRouter/>
