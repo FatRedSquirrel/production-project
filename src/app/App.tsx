@@ -6,14 +6,13 @@ import { Sidebar } from "widgets/Sidebar";
 
 import { useTheme } from "app/providers/ThemeProvider";
 import { Counter } from "entitites/Counter/ui/Counter";
+import { classNames } from "shared/lib/classNames";
 
 const App = () => {
   const { theme } = useTheme();
 
-  document.body.className = theme ? theme : "";
-
   return (
-    <div className="app">
+    <div className={classNames("app", {}, [theme])}>
       <Suspense fallback="">
         <Navbar/>
         <Counter/>
