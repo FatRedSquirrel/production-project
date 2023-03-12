@@ -47,6 +47,12 @@ BackgroundInvertedTheme.args = {
   theme: ButtonTheme.BACKGROUND_INVERTED
 };
 
+export const Loading = Template.bind({});
+Loading.args = {
+  theme: ButtonTheme.OUTLINE,
+  loading: true
+};
+
 export const SquareMode = Template.bind({});
 SquareMode.args = {
   children: ">",

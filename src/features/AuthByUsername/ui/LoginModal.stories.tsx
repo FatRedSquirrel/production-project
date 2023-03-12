@@ -1,8 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { LoginModal } from "./index";
-import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator";
-import { Theme } from "app/providers/ThemeProvider";
+import { StoreDecorator } from "shared/config/storybook/StoreDecorator";
 
 export default {
   title: "features/LoginModal",
@@ -18,9 +17,9 @@ export const Primary = Template.bind({});
 Primary.args = {
   isOpen: true
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-  isOpen: true
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Primary.decorators = [StoreDecorator({
+  loginForm: {
+    username: "",
+    password: ""
+  }
+})];

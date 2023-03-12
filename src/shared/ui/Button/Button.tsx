@@ -1,7 +1,6 @@
 import { type ButtonHTMLAttributes, type PropsWithChildren } from "react";
-
 import { classNames } from "shared/lib/classNames";
-
+import Spinner from "shared/assets/icons/spinner.svg";
 import cls from "./Button.module.scss";
 
 export enum ButtonTheme {
@@ -23,6 +22,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ButtonTheme
   square?: boolean
   size?: ButtonSize
+  loading?: boolean
 }
 
 export const Button = (props: PropsWithChildren<ButtonProps>) => {
@@ -32,6 +32,7 @@ export const Button = (props: PropsWithChildren<ButtonProps>) => {
     theme,
     square,
     size,
+    loading,
     ...otherProps
   } = props;
 
@@ -51,7 +52,9 @@ export const Button = (props: PropsWithChildren<ButtonProps>) => {
       className={classNames(cls.button, mods, additional)}
       {...otherProps}
     >
-      {children}
+      {loading
+        ? <Spinner/>
+        : children}
     </button>
   );
 };

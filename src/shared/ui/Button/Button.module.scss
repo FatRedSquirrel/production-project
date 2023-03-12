@@ -1,7 +1,18 @@
 .button {
   padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: var(--primary-color);
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  svg {
+    fill: var(--primary-color);
+  }
 }
 
 .clear,

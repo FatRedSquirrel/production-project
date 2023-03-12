@@ -8,5 +8,9 @@
   "Информация": "About",
   "Войти": "Log in",
   "Введите логин": "Enter username",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Не удалось авторизоваться": "Authorization failed",
+  "Ошибка": "Error",
+  "Форма авторизации": "Authorization form",
+  "Выйти": "Log out"
 }

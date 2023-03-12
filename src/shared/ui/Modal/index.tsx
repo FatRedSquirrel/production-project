@@ -47,9 +47,9 @@ export const Modal = (props: ModalProps) => {
       timerRef.current = setTimeout(() => {
         onClose();
         setIsClosing(false);
+        setIsMounted(false);
       }, 280);
     }
-    setIsMounted(false);
   }, [onClose]);
 
   const onContentClick = (e: React.MouseEvent) => {
