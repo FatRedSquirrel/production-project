@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from "react";
 import { classNames } from "shared/lib/classNames";
 import cls from "./Navbar.module.scss";
-import { Modal } from "shared/ui/Modal";
 import { useTranslation } from "react-i18next";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
+import { LoginModal } from "features/AuthByUsername";
 
 interface NavbarProps {
   className?: string
@@ -38,9 +38,11 @@ export const Navbar = ({ className }: NavbarProps) => {
           </Button>
         )}
       </div>
-      <Modal isOpen={isAuthModal} onClose={onModalToggle}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolore esse expedita ipsum numquam officiis, reiciendis suscipit totam voluptatem voluptatum.
-      </Modal>
+      <LoginModal
+        isOpen={isAuthModal}
+        onClose={onModalToggle}
+        lazy={true}
+      />
     </div>
   );
 };

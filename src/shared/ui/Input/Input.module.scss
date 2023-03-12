@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  background: transparent;
+  caret-color: transparent;
+
+  &Wrapper {
+    flex-grow: 1;
+    position: relative;
+  }
+
+  &__caret {
+    width: 9px;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: blink 800ms infinite;
+    background: var(--primary-color);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.99;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
